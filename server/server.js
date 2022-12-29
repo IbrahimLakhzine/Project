@@ -17,14 +17,13 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'Hello from CodeX!'
+    message: "Hello it's ibrahim!"
   })
 })
 
 app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
-
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${prompt}`,
@@ -45,4 +44,4 @@ app.post('/', async (req, res) => {
   }
 })
 
-app.listen(5000, () => console.log('server started on http://localhost:5000'))
+app.listen(5000, () => console.log('server started'))
