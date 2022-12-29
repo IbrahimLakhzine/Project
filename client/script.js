@@ -68,7 +68,7 @@ const handleSubmit = async (e) => {
     e.preventDefault()
 
     const data = new FormData(form)
-    const text="give me an article to promote my product named "+data.get('product_name')+" to promote it and the description of it is as follow: "+data.get('product_description')+" and the tone should be "+tone.value;
+    const text="give me an email to promote my product named "+data.get('product_name')+" to promote it and the description of it is as follow: "+data.get('product_description')+" and the tone should be "+tone.value;
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false,text)
 
